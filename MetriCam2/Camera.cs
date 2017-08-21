@@ -5,7 +5,7 @@ using MetriCam2.Exceptions;
 using Metrilus.Logging;
 using Metrilus.Util;
 using Microsoft.Win32;
-using Newtonsoft.Json;
+// using Newtonsoft.Json; // JSON-refactor
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -1916,22 +1916,22 @@ namespace MetriCam2
         /// <returns>The loaded parameters.</returns>
         public Dictionary<string, object> LoadParameters(string filename)
         {
-            // Deserialize
-            JsonSerializer serializer = new JsonSerializer();
-            serializer.TypeNameHandling = TypeNameHandling.Auto;
+            //// Deserialize // JSON-refactor
+            //JsonSerializer serializer = new JsonSerializer();
+            //serializer.TypeNameHandling = TypeNameHandling.Auto;
 
-            Dictionary<string, Camera.ParamDesc> configX;
-            using (StreamReader sr = new StreamReader(filename))
-            using (JsonReader reader = new JsonTextReader(sr))
-            {
-                configX = serializer.Deserialize<Dictionary<string, Camera.ParamDesc>>(reader);
-            }
+            //Dictionary<string, Camera.ParamDesc> configX;
+            //using (StreamReader sr = new StreamReader(filename))
+            //using (JsonReader reader = new JsonTextReader(sr))
+            //{
+                //configX = serializer.Deserialize<Dictionary<string, Camera.ParamDesc>>(reader);
+            //}
 
             Dictionary<string, object> config = new Dictionary<string, object>();
-            foreach (var item in configX)
-            {
-                config[item.Key] = (object)item.Value.Value;
-            }
+            //foreach (var item in configX)
+            //{
+                //config[item.Key] = (object)item.Value.Value;
+            //} // JSON-refactor
 
             return config;
         }
@@ -1950,17 +1950,17 @@ namespace MetriCam2
                 config[item.Name] = item;
             }
 
-            // Serialize
-            JsonSerializer serializer = new JsonSerializer();
-            serializer.NullValueHandling = NullValueHandling.Ignore;
-            serializer.Formatting = Formatting.Indented;
-            serializer.TypeNameHandling = TypeNameHandling.Auto;
+            // Serialize // JSON-refactor
+            //JsonSerializer serializer = new JsonSerializer();
+            //serializer.NullValueHandling = NullValueHandling.Ignore;
+            //serializer.Formatting = Formatting.Indented;
+            //serializer.TypeNameHandling = TypeNameHandling.Auto;
 
-            using (StreamWriter sw = new StreamWriter(filename))
-            using (JsonWriter writer = new JsonTextWriter(sw))
-            {
-                serializer.Serialize(writer, config);
-            }
+            //using (StreamWriter sw = new StreamWriter(filename))
+            //using (JsonWriter writer = new JsonTextWriter(sw))
+            //{
+                //serializer.Serialize(writer, config);
+            //} // JSON-refactor
         }
         #endregion
 
