@@ -2,11 +2,14 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\..\MetrilusReferencesVersions.props" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup Label="UserMacros">
+      <MetrilusUtilPath>../../../Metrilus.Util/bin/Debug/</MetrilusUtilPath>
+  </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B64515BC-38E8-44B3-AD2B-E13DEFE6DF96}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MetriCam2.Tests.LoadCalibrationsTest</RootNamespace>
     <AssemblyName>Test.LoadCalibrations</AssemblyName>
@@ -78,7 +81,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
+  <!--ItemGroup>
     <ProjectReference Include="..\..\BetaCameras\Kinect2\Kinect2.csproj">
       <Project>{03558646-61b1-4f4e-bf70-7a623df27095}</Project>
       <Name>Kinect2</Name>
@@ -87,7 +90,7 @@
       <Project>{342f049e-668b-4351-b21d-75e4bef5a1e4}</Project>
       <Name>MetriCam2</Name>
     </ProjectReference>
-  </ItemGroup>
+  </ItemGroup-->
   <ItemGroup>
     <None Include="..\..\.licenseheader">
       <Link>.licenseheader</Link>
