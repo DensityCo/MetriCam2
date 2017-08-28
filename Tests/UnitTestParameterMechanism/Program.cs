@@ -57,7 +57,7 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
         private static void TestBoolParam()
         {
             string paramName = "BoolParam";
-            log.Info("Testing a ParamDesc<bool>");
+            Console.WriteLine("Testing a ParamDesc<bool>");
 
             SetParameterToValid(paramName, true);
             SetParameterToValid(paramName, false);
@@ -97,7 +97,7 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
         private static void TestByteParam()
         {
             string paramName = "ByteParam";
-            log.Info("Testing a ParamDesc<byte>");
+            Console.WriteLine("Testing a ParamDesc<byte>");
             byte min = byte.MinValue;
             byte max = byte.MaxValue;
             long oobLow = min - 1;
@@ -151,7 +151,7 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
         private static void TestShortParam()
         {
             string paramName = "ShortParam";
-            log.Info("Testing a ParamDesc<short>");
+            Console.WriteLine("Testing a ParamDesc<short>");
             short min = short.MinValue;
             short max = short.MaxValue;
             long oobLow = min - 1;
@@ -205,7 +205,7 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
         private static void TestIntParam()
         {
             string paramName = "IntParam";
-            log.Info("Testing a ParamDesc<int>");
+            Console.WriteLine("Testing a ParamDesc<int>");
             int min = int.MinValue;
             int max = int.MaxValue;
             long oobLow = (long)min - 1L;
@@ -263,7 +263,7 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
         private static void TestLongParam()
         {
             string paramName = "LongParam";
-            log.Info("Testing a ParamDesc<long>");
+            Console.WriteLine("Testing a ParamDesc<long>");
             long min = long.MinValue;
             long max = long.MaxValue;
 
@@ -309,7 +309,7 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
         private static void TestFloatParam()
         {
             string paramName = "FloatParam";
-            log.Info("Testing a ParamDesc<float>");
+            Console.WriteLine("Testing a ParamDesc<float>");
             float min = float.MinValue;
             float max = float.MaxValue;
             double oobLow = ((double)min) * 2.0;
@@ -375,7 +375,7 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
         private static void TestDoubleParam()
         {
             string paramName = "DoubleParam";
-            log.Info("Testing a ParamDesc<double>");
+            Console.WriteLine("Testing a ParamDesc<double>");
             double min = double.MinValue;
             double max = double.MaxValue;
 
@@ -424,7 +424,7 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
         private static void TestEnumListParam()
         {
             string paramName = "EnumListParam";
-            log.Info("Testing a ListParamDesc<TriggerModeDummy>");
+            Console.WriteLine("Testing a ListParamDesc<TriggerModeDummy>");
             // allowed values are
             //TriggerModeDummy.FREERUN
             //TriggerModeDummy.SOFTWARE
@@ -452,7 +452,7 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
         private static void TestFloatListParam()
         {
             string paramName = "FloatListParam";
-            log.Info("Testing a ListParamDesc<float>");
+            Console.WriteLine("Testing a ListParamDesc<float>");
             // allowed values are
             //allowedValues.Add(16f);
             //allowedValues.Add(18.0f);
@@ -489,7 +489,7 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
         private static void TestByteRangeParam()
         {
             string paramName = "ByteRangeParam";
-            log.Info("Testing a RangeParamDesc<byte>");
+            Console.WriteLine("Testing a RangeParamDesc<byte>");
             Camera.IRangeParamDesc<byte> desc = (Camera.IRangeParamDesc<byte>)cam.GetParameter(paramName);
             byte min = desc.Min;
             byte max = desc.Max;
@@ -544,7 +544,7 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
         private static void TestShortRangeParam()
         {
             string paramName = "ShortRangeParam";
-            log.Info("Testing a RangeParamDesc<short>");
+            Console.WriteLine("Testing a RangeParamDesc<short>");
             Camera.IRangeParamDesc<short> desc = (Camera.IRangeParamDesc<short>)cam.GetParameter(paramName);
             short min = desc.Min;
             short max = desc.Max;
@@ -599,7 +599,7 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
         private static void TestIntRangeParam()
         {
             string paramName = "IntRangeParam";
-            log.Info("Testing a RangeParamDesc<int>");
+            Console.WriteLine("Testing a RangeParamDesc<int>");
             Camera.IRangeParamDesc<int> desc = (Camera.IRangeParamDesc<int>)cam.GetParameter(paramName);
             int min = desc.Min;
             int max = desc.Max;
@@ -658,7 +658,7 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
         private static void TestLongRangeParam()
         {
             string paramName = "LongRangeParam";
-            log.Info("Testing a RangeParamDesc<long>");
+            Console.WriteLine("Testing a RangeParamDesc<long>");
             Camera.IRangeParamDesc<long> desc = (Camera.IRangeParamDesc<long>)cam.GetParameter(paramName);
             long min = desc.Min;
             long max = desc.Max;
@@ -717,7 +717,7 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
         private static void TestFloatRangeParam()
         {
             string paramName = "FloatRangeParam";
-            log.Info("Testing a RangeParamDesc<float>");
+            Console.WriteLine("Testing a RangeParamDesc<float>");
             Camera.IRangeParamDesc<float> desc = (Camera.IRangeParamDesc<float>)cam.GetParameter(paramName);
             float min = desc.Min;
             float max = desc.Max;
@@ -784,7 +784,7 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
         private static void TestDoubleRangeParam()
         {
             string paramName = "DoubleRangeParam";
-            log.Info("Testing a RangeParamDesc<double>");
+            Console.WriteLine("Testing a RangeParamDesc<double>");
             Camera.IRangeParamDesc<double> desc = (Camera.IRangeParamDesc<double>)cam.GetParameter(paramName);
             double min = desc.Min;
             double max = desc.Max;
@@ -852,7 +852,7 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
         private static void TestPoint3fParam()
         {
             string paramName = "Point3fParam";
-            log.Info("Testing a ParamDesc<Point3f>");
+            Console.WriteLine("Testing a ParamDesc<Point3f>");
             Point3f min = new Point3f(float.MinValue, float.MinValue, float.MinValue);
             Point3f max = new Point3f(float.MaxValue, float.MaxValue, float.MaxValue);
             float[] somevalues = new float[] { 0f, 0.5f, 1f, 5f, 10.0503f, 100f, 255f, 999.99999f, 1000f };
@@ -901,7 +901,7 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
             }
             catch (ArgumentException)
             {
-                log.InfoFormat("Setting {0} to \"{1}\" expectedly caused an error.", name, value);
+                Console.WriteLine("Setting {0} to \"{1}\" expectedly caused an error.", name, value);
             }
             catch (ParameterNotSupportedException)
             {
@@ -939,13 +939,13 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
             }
             catch (ParameterNotSupportedException)
             {
-                log.InfoFormat("Setting {0} to \"{1}\" while being disconnected caused an unexpected error." + Environment.NewLine
+                Console.WriteLine("Setting {0} to \"{1}\" while being disconnected caused an unexpected error." + Environment.NewLine
                     + "Probably the camera does not support this parameter.", name, value);
                 return;
             }
             catch (InvalidOperationException)
             {
-                log.InfoFormat("Setting \"{0}\" while being disconnected expectedly caused an error.", name);
+                Console.WriteLine("Setting \"{0}\" while being disconnected expectedly caused an error.", name);
             }
             LogParameterValue(name);
         }
@@ -953,10 +953,10 @@ namespace MetriCam2.Tests.UnitTestParameterMechanism
 
         private static void LogParameterValue(string name)
         {
-            log.Info(cam.GetParameter(name));
+            Console.WriteLine(cam.GetParameter(name));
             if (Camera.ParamDesc.IsAutoParameterName(name))
             {
-                log.Info(cam.GetParameter(Camera.ParamDesc.GetBaseParameterName(name)));
+                Console.WriteLine(cam.GetParameter(Camera.ParamDesc.GetBaseParameterName(name)));
             }
         }
         #endregion
